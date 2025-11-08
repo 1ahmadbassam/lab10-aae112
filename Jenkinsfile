@@ -48,7 +48,7 @@ pipeline {
             steps {
                 script {
                     echo 'Running Security Scan...'
-                    bat '%VIRTUAL_ENV%\\Scripts\\activate.bat && bandit -r .'
+                    bat '%VIRTUAL_ENV%\\Scripts\\activate.bat && bandit -r . -x venv'                
                 }
             }
         }
